@@ -23,12 +23,12 @@ spec:
 - apiVersion: It defines the version of the Kubernetes API that we are using.
 - This version is different for each resource type.
 
-Kind       | Version
----        | ---
-Pod        | v1
-Service    | v1
-ReplicaSet | apps/v1
-Deployment | apps/v1
+ Kind       | Version 
+------------|---------
+ Pod        | v1      
+ Service    | v1      
+ ReplicaSet | apps/v1 
+ Deployment | apps/v1 
 
 - kind: It defines the type of the resource that we are creating.
 - metadata: It defines the data that is used to identify the resource.
