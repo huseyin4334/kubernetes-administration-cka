@@ -53,4 +53,6 @@ It has some services to run the containers and is managed by the master componen
 
 > Read: [Kubernetes Architecture And Components](https://medium.com/@himanshusangshetty/kubernetes-architecture-and-components-explained-e489e98db15d)
 
-> Read: [Pdf](../sources/pdfs/core-concept/Core+concepts+-2.pdf) 
+> Read: [Pdf](../sources/pdfs/core-concept/Core+concepts+-2.pdf)
+
+> Read: [Pdf](https://medium.com/@maheshwar.ramkrushna/kubernetes-directory-structure-c1fe0d3aa8ef#:~:text=Kubernetes%20directory%20structure%20includes%20%2Fetc,%2Fetc%2Fcni%2Fnet.)
