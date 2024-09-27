@@ -11,7 +11,7 @@ kubectl replace --force -f <path-to-file>
 kubectl get pods --selector env=prod
 
 # count the number of rows (header is not included)
-kubectl get pods --selector env=prod --noheaders | wc -l
+kubectl get pods --selector env=prod --no-headers | wc -l
 
 # count the number of rows (header is included)
 kubectl get pods --selector env=prod | wc -l
