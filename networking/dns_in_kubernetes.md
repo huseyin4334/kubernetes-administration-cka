@@ -67,12 +67,49 @@ cat /var/lib/kubelet/config.yaml
 # clusterDomain: cluster.local
 ```
 
+# Lab
 
+Where is the configuration file of the CoreDNS service located?
 
+- /etc/coredns/Corefile
 
+```bash
+kubectl get configmap coredns -n kube-system -o yaml
 
+# This file contains the configuration of the CoreDNS service.
+# This file transforms the Corefile from the ConfigMap into a CoreDNS configuration file.
+```
 
+In default namespace;
+- Pods
+  - hr
+  - test
+- Services
+  - web-service (It's looking hr pod)
 
+In payroll namespace;
+- Pods
+  - web
+  - mysql
+- Services
+  - web-service (it's looking web pod)
+  - mysql
 
+```bash
+kubectl exec test -- curl web-service
+# Welcome to the HR department
 
+kubectl exec test -- curl web-service.payroll
+# Welcome to the web app
+```
 
+Let's get nslookup result to the file.
+
+```bash
+kubectl exec hr -- nslookup mysql.payroll > /tmp/mysql.txt
+
+# Server: .... (it's the CoreDNS service IP address.)
+
+# Name: mysql.payroll.svc.cluster.local
+# Address: 10.1017.37.188
+```
