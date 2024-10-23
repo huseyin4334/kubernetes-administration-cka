@@ -231,7 +231,7 @@ WE can use the weave network with apply the yaml file.
 ```bash
 # It will create a daemonset in the cluster.
 # And it will create some other resources for security.
-kubectl apply -f https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')
+kubectl apply -f https://github.com/weaveworks/weave/releases/download/latest_release/weave-daemonset-k8s-1.11.yaml
 
 # It creates a deamonset because it should run in all nodes.
 # And it creates this in the kube-system namespace.
